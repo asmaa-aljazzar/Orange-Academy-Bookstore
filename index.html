@@ -1,10 +1,298 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore</title>
+
+    <title>Haven Books | Community Bookstore</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    h
+
+    <!-- Background Animation -->
+    <div class="background-balls" aria-hidden="true">
+        <span class="ball ball-1"></span>
+        <span class="ball ball-2"></span>
+        <span class="ball ball-3"></span>
+        <span class="ball ball-4"></span>
+        <span class="ball ball-5"></span>
+        <span class="ball ball-6"></span>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">☕</span>
+                Haven Books
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+
+            <a href="#membership" class="nav-button">
+                Join Us
+            </a>
+
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero container" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">YOUR NEXT CHAPTER BEGINS HERE</p>
+
+                <h1>
+                    Every book holds
+                    <span>a new world.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Welcome to Haven Books, a community bookstore
+                    where stories bring people together. Discover
+                    books, explore new ideas, and find your next
+                    favorite read.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#categories" class="button button-primary">
+                        Explore Books
+                    </a>
+
+                    <a href="#membership" class="button button-secondary">
+                        Become a Member
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="book-decoration book-one"></div>
+                <div class="book-decoration book-two"></div>
+
+                <div class="book-illustration">
+
+                    <div class="book-cover">
+                        <span class="book-symbol">✦</span>
+                        <h2>Stories</h2>
+                        <p>Worth Living</p>
+                    </div>
+
+                    <div class="book-pages"></div>
+
+                </div>
+
+                <div class="floating-label label-top">
+                    <span>✦</span> Discover
+                </div>
+
+                <div class="floating-label label-bottom">
+                    <span>♡</span> Read & Grow
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories section container" id="categories">
+
+            <div class="section-heading">
+                <p class="eyebrow">FIND YOUR NEXT READ</p>
+
+                <h2>Explore Our Categories</h2>
+
+                <p>
+                    Whether you seek an imaginary world or
+                    knowledge of reality, there is a story for you.
+                </p>
+            </div>
+
+            <div class="category-grid">
+
+                <article class="category-card">
+
+                    <div class="category-icon">☾</div>
+
+                    <h3>Fiction</h3>
+
+                    <p>
+                        Escape into captivating stories,
+                        unforgettable characters, and imaginary worlds.
+                    </p>
+
+                    <a href="#membership" class="category-link">
+                        Explore Fiction →
+                    </a>
+
+                </article>
+
+                <article class="category-card">
+
+                    <div class="category-icon">✧</div>
+
+                    <h3>Non-Fiction</h3>
+
+                    <p>
+                        Expand your knowledge with real stories,
+                        inspiring ideas, and meaningful discoveries.
+                    </p>
+
+                    <a href="#membership" class="category-link">
+                        Explore Non-Fiction →
+                    </a>
+
+                </article>
+
+                <article class="category-card">
+
+                    <div class="category-icon">♧</div>
+
+                    <h3>Community Picks</h3>
+
+                    <p>
+                        Discover books loved by our community
+                        and find inspiration for your next journey.
+                    </p>
+
+                    <a href="#recommendations" class="category-link">
+                        View Picks →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Recommendations Section -->
+        <section class="recommendations section" id="recommendations">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+
+                    <h2>Discover Your Next Favorite</h2>
+
+                    <p>
+                        A few stories to inspire your next reading adventure.
+                    </p>
+                </div>
+
+                <div class="book-grid">
+
+                    <article class="book-card">
+                        <div class="book-image fiction-cover">
+                            <span>✦</span>
+                            <h3>The Hidden Garden</h3>
+                        </div>
+
+                        <div class="book-info">
+                            <span class="book-category">Fiction</span>
+                            <h3>The Hidden Garden</h3>
+                            <p>A journey into mystery and imagination.</p>
+                        </div>
+                    </article>
+
+                    <article class="book-card">
+                        <div class="book-image knowledge-cover">
+                            <span>☼</span>
+                            <h3>Small Discoveries</h3>
+                        </div>
+
+                        <div class="book-info">
+                            <span class="book-category">Non-Fiction</span>
+                            <h3>Small Discoveries</h3>
+                            <p>Explore ideas that shape our world.</p>
+                        </div>
+                    </article>
+
+                    <article class="book-card">
+                        <div class="book-image classic-cover">
+                            <span>❦</span>
+                            <h3>Letters & Stories</h3>
+                        </div>
+
+                        <div class="book-info">
+                            <span class="book-category">Community Pick</span>
+                            <h3>Letters & Stories</h3>
+                            <p>A collection of timeless reflections.</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Membership Section -->
+        <section class="membership section container" id="membership">
+
+            <div class="membership-content">
+
+                <p class="eyebrow">BECOME PART OF OUR COMMUNITY</p>
+
+                <h2>Every reader belongs somewhere.</h2>
+
+                <p>
+                    Join our bookstore community and discover
+                    reading recommendations tailored to your interests.
+                    Your next adventure is only a book away.
+                </p>
+
+                <button class="button button-primary" id="join-button">
+                    Join the Community
+                </button>
+
+            </div>
+
+            <div class="membership-decoration">
+                <div class="membership-circle">
+                    <span>📖</span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">☕</span>
+                Haven Books
+            </a>
+
+            <p>
+                A place for stories, knowledge, and community.
+            </p>
+
+            <p class="copyright">
+                © 2026 Haven Books. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="app.js"></script>
+
 </body>
 </html>
