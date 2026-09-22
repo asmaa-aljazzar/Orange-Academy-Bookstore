@@ -1,0 +1,31 @@
+let str = prompt("Enter any text");
+let result = "";
+
+str = str.trim();
+
+if (str) {
+    // first char
+    if (str[0] >= 'A' && str[0] <= 'Z')
+        result += str[0].toLowerCase();
+    else
+        result += str[0];
+
+    let i = 1;
+    let char;
+    while (i < str.length) {
+        char = str[i];
+
+        if (str[i - 1] === " ") 
+        {
+            if (char !== " " && (char >= 'a' && char <= 'z'))
+                result += str[i].toUpperCase ();
+        }
+        else if (char !== " ")
+            result += char;
+
+        i++;
+    }
+}
+
+console.log("Input: " + str);
+console.log("Output: " + result);
