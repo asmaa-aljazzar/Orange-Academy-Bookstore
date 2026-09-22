@@ -2,9 +2,8 @@ let str = prompt("Enter Any Text");
 let result = "";
 
 if (str) {
-    let i = 0;
     let char;
-    while (i < str.length) {
+    for (let i = 0; i < str.length; i++) {
         char = str[i];
         if (char >= 'a' && char <= 'z')
             result += char.toUpperCase();
@@ -12,7 +11,6 @@ if (str) {
             result += char.toLowerCase();
         else
             result += char;
-        i++;
     }
 }
 
