@@ -4,27 +4,24 @@ let result = "";
 str = str.trim();
 
 if (str) {
-    // first char
     if (str[0] >= 'A' && str[0] <= 'Z')
         result += str[0].toLowerCase();
     else
         result += str[0];
 
-    let i = 1;
     let char;
-    while (i < str.length) {
+    for (let i = 1; i < str.length; i++) {
         char = str[i];
-
-        if (str[i - 1] === " ") 
-        {
+        if (str[i - 1] === " ") {
             if (char !== " " && (char >= 'a' && char <= 'z'))
-                result += str[i].toUpperCase ();
+                result += str[i].toUpperCase();
+            else if (char !== " ")
+                result += char;
+            i++;
         }
-        else if (char !== " ")
-            result += char;
 
-        i++;
     }
+
 }
 
 console.log("Input: " + str);
