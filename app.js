@@ -1,22 +1,52 @@
-const uname = prompt ("What is your name?");
-let membershipType = prompt ("Choose a membership type: Student / Regular");
+let uname = prompt("What is your name?");
+if (uname && uname !== "")
+    uname = uname.trim ();
+let membershipType;
+let userBook = [];
 
-if (membershipType)
-    membershipType = membershipType.toLocaleLowerCase ().trim ();
+do {
+    membershipType = prompt("Choose a membership type: Student / Regular");
+    if (membershipType !== "")
+        membershipType = membershipType.toLocaleLowerCase().trim();
+}
+while (!membershipType || membershipType === "" || (membershipType !== "student" && membershipType !== "regular"));
 
-if (membershipType === "student")
-    alert ("Welcome " + uname + " You are a Scholar");
-else if (membershipType === "regular")
-    alert ("Welcome " + uname + " You are a Member");
-else
-    alert("Welcome " + uname)
+const validateMembership = (membershipType, uname) =>{
+    if (membershipType === "student" && uname !== "")
+        alert("Welcome " + uname + " You are a Scholar");
+    else
+        alert("Welcome " + uname + " You are a Member");
+}
 
-confirm ("Click OK for Fiction, or Cancel for Non-Fiction");
+validateMembership (membershipType, uname);
 
-let bookTitle = prompt ("Enter the book title");
+let bookGenre = prompt("Choose Fiction, Non-Fiction genre");
+if (bookGenre && bookGenre !== "")
+    bookGenre = bookGenre.trim ();
 
-if (bookTitle)
-    alert ("Your request to borrow " + bookTitle + "has been reserved");
+let bookTitle = prompt("Enter the book title");
+if (bookTitle && bookTitle != "")
+    alert("Your request to borrow" + bookTitle + "has been reserved");
 
-console.log ("Username: " + uname);
-console.log ("Book title: " + bookTitle);
+if (uname && uname !== "")
+    console.log("Username: " + uname);
+
+if (bookTitle && bookTitle !== "")
+    console.log("Book title: " + bookTitle);
+
+const collectData = (uname, membershipType, bookGenre, bookTitle) => {
+    if (uname != "" && uname
+        && membershipType
+        && bookGenre && bookGenre != "" 
+        && bookTitle && bookTitle != "")
+        return [uname, membershipType, bookGenre, bookTitle];
+    return [];
+}
+
+userBook = collectData (uname, membershipType, bookGenre, bookTitle);
+
+let i = 0;
+while (i < userBook.length){
+    console.log(userBook[i]);
+    i++;
+}
