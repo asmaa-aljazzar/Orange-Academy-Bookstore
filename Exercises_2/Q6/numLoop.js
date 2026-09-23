@@ -1,8 +1,14 @@
+let input = prompt ("Enter any number");
 let num;
-let allNum;
-let sum;
+let allNum = "";
+let sum = 0;
 
-for (let i = 0; i <= num; i += 3)
+if (input === null)
+    alert ("Canceled");
+
+num = Number (input);
+
+for (let i = 0; i <= num; i++)
 {
     if (i != num)
         allNum += (i + " + ");
@@ -11,4 +17,4 @@ for (let i = 0; i <= num; i += 3)
     sum += i;
 }
 
-console.log(result, sum);
+console.log(allNum, sum);
