@@ -11,6 +11,6 @@ do {
     
     num = Number (input);
 
-    if (input.trim = "" || num < 0 || num > 100)
+    if (input.trim == "" || num < 0 || num > 100)
         alert ("Error: Invalid number");
-} while (input.trim = "" || num < 0 || num > 100)
+} while (input.trim == "" || num < 0 || num > 100)
