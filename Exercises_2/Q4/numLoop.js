@@ -8,7 +8,9 @@ do {
         alert ("Error");
         break;
     }
+
     num = Number (input);
-    if (input.trim() = "" || isNaN () || num < 0 || num > 100)
+
+    if (input.trim() = "" || isNaN (num) || num < 0 || num > 100)
         alert ("Error: Invalid number");
-} while (input.trim() = "" || isNaN () || num < 0 || num > 100)
+} while (input.trim() = "" || isNaN (num) || num < 0 || num > 100)
