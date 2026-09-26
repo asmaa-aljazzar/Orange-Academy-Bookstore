@@ -73,8 +73,12 @@ const displayUserCard = (userData) => {
     titleStrong.textContent = "Book Genre: ";
     titleP.append (titleStrong);
     titleP.appendChild (document.createTextNode (bookTitle));
-    card.appendChild (titleP);   
-}
+    card.appendChild (titleP);
+    
+    const hr = document.createElement ("hr");
+    card.appendChild (hr);
+
+  }
 
 
 form.addEventListener("submit", (event) => {

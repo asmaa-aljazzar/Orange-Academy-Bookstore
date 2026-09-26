@@ -1,0 +1,84 @@
+/* General reset for box dimensions and margins */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page body styling to center content with padding */
+body {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Heading style */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+/* Form layout structure */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styles created dynamically via JavaScript */
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 4px;
+  margin-top: 12px;
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Focus state for active inputs */
+input:focus {
+  border-color: #007bff;
+}
+
+/* Red error validation text created via JavaScript */
+.error-message {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Register button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #1890ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+/* Disabled state style when form is invalid */
+button[type="submit"]:disabled {
+  background-color: #007bff;
+  opacity: 0.8;
+  cursor: not-allowed;
+}

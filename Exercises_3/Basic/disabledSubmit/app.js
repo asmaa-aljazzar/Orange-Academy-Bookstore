@@ -4,47 +4,27 @@ const passInput = document.getElementById("pass");
 const confPassInput = document.getElementById("confPass");
 const button = document.querySelector("button");
 
-//? Ex1: Add labels
-//setAttribute => (attribute name, attribute value)
 const unameLabel = document.createElement("label");
 unameLabel.textContent = "Username:";
 unameLabel.setAttribute("for", "uname");;
-// parentNode => Find the parent node that hold that input
-//insertBefore => Will go to parent search for the 2nd att and add the 1st att before it.
 unameInput.parentNode.insertBefore(unameLabel, unameInput);
 
 const passLabel = document.createElement("label");
 passLabel.textContent = "Password:";
-passLabel.setAttribute("for", "uname");;
+passLabel.setAttribute("for", "pass");;
 passInput.parentNode.insertBefore(passLabel, passInput);
 
 const confPassLabel = document.createElement("label");
 confPassLabel.textContent = "ConfirmPassword:";
-confPassLabel.setAttribute("for", "uname");;
+confPassLabel.setAttribute("for", "confPass");;
 confPassInput.parentNode.insertBefore(confPassLabel, confPassInput);
 
-const requiredMsg = (input, value) => {
-    let existingError = input.nextSibling;
-    const isErrorPresent = existingError && existingError?.classList?.contains("err-msg");
-
-    if (!value || value.trim() == "") {
-        if (!isErrorPresent) {
-            const errMsg = document.createElement("span");
-            errMsg.textContent = "Required";
-            errMsg.style.color = "red";
-            errMsg.classList.add("err-msg");
-            // nextSibling means go to the next sibling and put it before it
-            input.parentNode.insertBefore(errMsg, input.nextSibling);
-        }
-        return true;
-    }
-    else
-        if (isErrorPresent)
-            existingError.remove();
-    return false;
+const isValidInput = (value) => {
+    if (!value || value.trim () === "")
+        return false;
+    return true;
 }
 
-//? Ex2: Required Input
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -52,16 +32,20 @@ form.addEventListener("submit", (event) => {
     const password = passInput.value;
     const confPassword = confPassInput.value;
 
-    const unameErr = requiredMsg(unameInput, uname);
-    const passErr = requiredMsg(passInput, password);
-    const confPassErr = requiredMsg(confPassInput, confPassword);
+    const validUsername = isValidInput (uname); 
+    const validPass = isValidInput (password); 
+    const validConfPass = isValidInput (confPassword); 
 
-    if (unameErr || passErr || confPassErr)
-        return;
+    if (!validUsername || !validPass || !validConfPass)
+    {
+        button.disabled = true;
+        return ;
+    }
 
     if (notMatchMsg(password, confPassword))
         return;
-
+    button.disabled = false;
+    console.log(`Form Submited: ${uname} ${password} ${confPassword}`);
     form.reset();
 });
 
@@ -87,3 +71,5 @@ const notMatchMsg = (password, confPassword) => {
             existError.remove ();
         return false;
 }
+
+
