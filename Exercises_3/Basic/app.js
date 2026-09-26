@@ -32,7 +32,7 @@ const requiredMsg = (input, value) => {
             const errMsg = document.createElement("span");
             errMsg.textContent = "Required";
             errMsg.style.color = "red";
-            errMsg.classList.add ("err-msg");
+            errMsg.classList.add("err-msg");
             // nextSibling means go to the next sibling and put it before it
             input.parentNode.insertBefore(errMsg, input.nextSibling);
         }
@@ -55,9 +55,35 @@ form.addEventListener("submit", (event) => {
     const unameErr = requiredMsg(unameInput, uname);
     const passErr = requiredMsg(passInput, password);
     const confPassErr = requiredMsg(confPassInput, confPassword);
-    
+
     if (unameErr || passErr || confPassErr)
-        return ;
+        return;
+
+    if (notMatchMsg(password, confPassword))
+        return;
 
     form.reset();
-})
+});
+
+
+//? Ex3: Matching password
+const notMatchMsg = (password, confPassword) => {
+    const existError = confPassInput.nextElementSibling;
+    const isErrorPresent = existError && existError.classList.contains("err-msg");
+
+    if (password !== confPassword) {
+        if (!isErrorPresent)
+        {
+            const errMsg = document.createElement ("span");
+            errMsg.textContent = "Passwords do not match";
+            errMsg.style.color = "red";
+            errMsg.classList.add ("err-msg");
+            confPassInput.parentNode.insertBefore (errMsg, existError);
+        }
+            return true;
+    }
+    else
+        if (isErrorPresent)
+            existError.remove ();
+        return false;
+}
