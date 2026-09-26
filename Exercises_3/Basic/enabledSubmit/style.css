@@ -75,10 +75,3 @@ button[type="submit"] {
   cursor: pointer;
   margin-top: 16px;
 }
-
-/* Disabled state style when form is invalid */
-button[type="submit"]:disabled {
-  background-color: #007bff;
-  opacity: 0.8;
-  cursor: not-allowed;
-}
