@@ -1,4 +1,3 @@
-
 /* ========================================
    VARIABLES
 ======================================== */
@@ -407,13 +406,11 @@ button {
     width: 35px;
     height: 300px;
     border-radius: 0 4px 4px 0;
-    background: repeating-linear-gradient(
-        to bottom,
-        #f4eadc 0,
-        #f4eadc 2px,
-        #d4bda6 3px,
-        #f4eadc 5px
-    );
+    background: repeating-linear-gradient(to bottom,
+            #f4eadc 0,
+            #f4eadc 2px,
+            #d4bda6 3px,
+            #f4eadc 5px);
     transform: translateX(24px);
 }
 
@@ -667,7 +664,7 @@ button {
 
 
 /* ========================================
-   MEMBERSHIP
+MEMBERSHIP
 ======================================== */
 
 .membership {
@@ -695,8 +692,67 @@ button {
     font-size: 0.95rem;
 }
 
-.membership .button {
+.hidden {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+#result-card strong {
+    font-size: 23px;
+}
+
+#result-card p {
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box {
+    box-shadow: -10px 10px 50px var(--color-light-brown);
+    padding: 40px 30px;
+    border-radius: 15px;
+    display: flex;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    width: 100%;
     margin-top: 30px;
+    flex-direction: column;
+    gap: 5px;
+    height: 95%;
+}
+
+form input,
+form select {
+    border: 1px solid var(--color-medium-brown);
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 15px;
+    color: var(--color-medium-brown);
+}
+
+form label {
+    color: var(--color-brown);
+}
+
+form label {
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+form button {
+    margin-top: 30px;
+    min-width: 350px;
+    align-self: center;
+}
+
+input::placeholder {
+    color: var(--color-medium-brown);
+    font-style: italic;
 }
 
 .membership-decoration {

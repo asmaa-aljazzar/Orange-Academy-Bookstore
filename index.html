@@ -254,10 +254,6 @@
                     Your next adventure is only a book away.
                 </p>
 
-                <button class="button button-primary" id="join-button">
-                    Join the Community
-                </button>
-
             </div>
 
             <div class="membership-decoration">
@@ -266,6 +262,39 @@
                 </div>
             </div>
 
+            <!-- Membership form -->
+            <form id="membership-form" class="box visible">
+                <h2>Register Now</h2>
+                    <label for="uname">Username:</label>
+                    <input type="text" name="uname" id="uname" placeholder="ex. john_doe" required>
+                    
+                    <label for="memship">Membership type:</label>
+                    <select name="memship" id="memship" required>
+                        <option value="" disabled hidden selected>Choose membership type...</option>
+                        <option value="regular">Regular</option>
+                        <option value="student">Student</option>
+                    </select>
+                    
+                    <small id="memshipError" style="color: red;"></small>
+                    
+                    <label for="genre">Book genre:</label>
+                    <select name="genre" id="genre" required>
+                        <option value="" hidden disabled selected>Select a genre...</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                        <option value="biography">Biography</option>
+                    </select>
+                    
+                    <label for="title">Book title</label>
+                    <input type="text" name="title" id="title" placeholder="ex. Clean Code" required>
+                    <small id="bookTitleError" style="color: red;"></small>
+                    
+                    <button class="button button-primary" type="submit">Confirm</button>
+                </form>
+
+            <!-- Result Card -->
+            <div id="result-card" class="box hidden"></div>
         </section>
 
     </main>
